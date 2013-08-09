@@ -1,9 +1,9 @@
 <h1><%= @article.title %></h2>
 
-<p>
-	<%= @article.body %>
-</p>
+<p><%= @article.body %></p>
+<p><%= link_to "Edit", edit_article_path(@article), :class => "edit_article"%></p>
 
-<p>
-	<%= link_to "edit", edit_article_path(@article), :class => "edit_article"%>
-</p>
+<h3><%= @article.comments.size %> Comments</h3>
+
+<h3>Post a Comment</h3>
+<%= render :partial => 'comments/comment_form', :locals => {:article => @article, :comment => @article.comments.new } %>
