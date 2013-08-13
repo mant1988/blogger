@@ -1,0 +1,6 @@
+<div>
+	<% comments.each do |comment| %>
+	<h5>Comment by <%= comment.author_name %></h5>
+	<p class="comment"><%= comment.body %></p>
+	<% end %>
+</div>
