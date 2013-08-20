@@ -4,7 +4,7 @@ class Article < ActiveRecord::Base
   has_many :tags, :through => :taggings
   has_attached_file :image
 
-  attr_accessor :title, :body, :tag_list, :image
+  attr_accessor :image
 
   def tag_list
     self.tags.map do |tag|
